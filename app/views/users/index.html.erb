@@ -1,0 +1,15 @@
+<h4>List of Members</h4>
+<table>
+  <tr>
+    <th>Name</th>
+     <th>Email</th>
+  </tr>
+  
+  <% @users.each do |users| %>
+    <tr>
+      <td><%=users.name%></td>
+      <td><%=users.email%></td>
+      <td><%=link_to 'Show',user_path(users)%></td>
+    </tr>
+  <%end%>
+</table>

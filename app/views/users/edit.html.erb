@@ -1,0 +1,30 @@
+<h1>Edit Your Profile</h>
+<div class="main_form text-center">
+  
+<% if @user.errors.any? %>
+<h3>The following ERRORS prevented the<br/> USER from being CREATED!</h3>
+<ul>
+  <% @user.errors.full_messages.each do |msg| %>
+    <li>
+        <%= msg %>
+    </li>
+  <% end %> 
+</ul>
+<%end%>
+
+<%= form_for @user do |f| %>
+
+<p>
+  <%= f.label :Username %> <br/>
+  <%= f.text_field :name %>
+</p>
+<p>
+  <%= f.label :email %> <br/>
+  <%= f.email_field :email, :value => "example@email.com" %>
+</p>
+
+<%= f.submit "Edit Your Profile", class:"sign_btn btn btn-primary" %>
+<% end %> 
+<br/>
+<p><%= link_to " Back To All Members",users_path%></p>
+
