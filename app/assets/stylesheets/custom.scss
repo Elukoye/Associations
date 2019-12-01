@@ -3,35 +3,35 @@
 
 /* universal */
 
-body {
-  padding-top: 60px;
-}
+// body {
+//   padding-top: 60px;
+// }
 
-section {
-  overflow: auto;
-}
+// section {
+//   overflow: auto;
+// }
 
-textarea {
-  resize: vertical;
-}
+// textarea {
+//   resize: vertical;
+// }
 
-.center {
-  text-align: center;
-}
+// .center {
+//   text-align: center;
+// }
 
-.center h1 {
-  margin-bottom: 10px;
-}
+// .center h1 {
+//   margin-bottom: 10px;
+// }
 
-/* forms */
+// /* forms */
 
-input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
-  width: 100%;
-  margin-bottom: 15px;
-  @include box_sizing;
-}
+// input, textarea, select, .uneditable-input {
+//   border: 1px solid #bbb;
+//   width: 100%;
+//   margin-bottom: 15px;
+//   @include box_sizing;
+// }
 
-input {
-  height: auto !important;
-}
+// input {
+//   height: auto !important;
+// }
