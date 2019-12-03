@@ -9,12 +9,16 @@
   </head>
 
   <body>
-    <%= render 'layouts/header' %>
+  <div class="container bg">
+        <%= render 'layouts/header' %>
     <ul>
       <% flash.each do |name,msg| %>
         <li><%= msg %></li>
      </ul>
       <% end %>
     <%= yield %>
+  </div>
+    <%= render 'layouts/main' %>
+    <%= render 'layouts/footer' %>
   </body>
 </html>
