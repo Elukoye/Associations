@@ -1,37 +1,155 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* mixins, variables, etc. */
+
+$gray-medium-light: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
 /* universal */
 
-// body {
-//   padding-top: 60px;
-// }
+body {
+  padding-top: 60px;
+}
 
-// section {
-//   overflow: auto;
-// }
+section {
+  overflow: auto;
+}
 
-// textarea {
-//   resize: vertical;
-// }
+textarea {
+  resize: vertical;
+}
 
-// .center {
-//   text-align: center;
-// }
+.center {
+  text-align: center;
+}
 
-// .center h1 {
-//   margin-bottom: 10px;
-// }
+.center h1 {
+  margin-bottom: 10px;
+}
 
-// /* forms */
+/* typography */
 
-// input, textarea, select, .uneditable-input {
-//   border: 1px solid #bbb;
-//   width: 100%;
-//   margin-bottom: 15px;
-//   @include box_sizing;
-// }
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
 
-// input {
-//   height: auto !important;
-// }
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #777;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* header */
+.navbar{
+  margin: 0 !important;
+}
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+.form-inline .form-control {
+  margin-top: 14px;
+}
+.d-flex{
+  display: flex;
+}
+
+input {
+  height: auto !important;
+}
+
+/* dropdown menu*/
+
+.dropdown-item{
+  display: block;
+    width: 100%;
+    padding: .25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+.dropdown-item:hover{
+  background: rgba(209, 207, 207, 0.726);
+}
+.dropdown-divider{
+  height: 0;
+  overflow: hidden;
+  border-top: 1px solid #e9ecef;
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
