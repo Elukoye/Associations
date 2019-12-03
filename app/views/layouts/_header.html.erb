@@ -1,0 +1,41 @@
+<header class="navbar navbar-fixed-top navbar-expand-lg navbar-inverse">
+          <div class="container">
+
+            <%= link_to "Event App", id: "logo"  %>
+            <nav class="navbar">
+
+              <ul class="nav navbar-nav navbar-right d-flex">
+                    <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Owerview</a>
+                            <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Pricing</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Blog</a>
+                            <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Resources</a>
+                </div>
+              </li>
+
+            <li><a href="/static_pages/about">About</a></li>
+            <li><a href="/static_pages/home">Home</a></li>
+
+			<li><%= link_to "Sign Up", class: "nav-link" %></li>
+      <li><%= link_to "Log In",  class: "nav-link" %></li>
+	
+   
+      
+	
+               
+           </ul>
+            </nav>
+          </div>
+        </header>
