@@ -1,33 +1,25 @@
+<% provide(:title, 'Sign up') %>
+        <h1>Sign up</h1>
 
-<h1>Sign Up</h1>
-<div class="main_form text-center">
-  
-<% if @user.errors.any? %>
-<h3>The following ERRORS prevented the<br/> USER from being CREATED!</h3>
-<ul>
-  <% @user.errors.full_messages.each do |msg| %>
-    <li>
-        <%= msg %>
-    </li>
-  <% end %> 
-</ul>
-<%end%>
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <%= form_for(@user, url: signup_path) do |f| %>
+            <%= render 'shared/error_messages' %>
 
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-<%= form_for @user do |f| %>
+              <%= f.label :name %>
+               <%= f.text_field :name, class: 'form-control' %>
 
-<p>
-  <%= f.label :name %> <br/>
-  <%= f.text_field :name %>
-</p>
-<p>
-  <%= f.label :email %> <br/>
-  <%= f.email_field :email, :value => "example@email.com" %>
-</p>
+              <%= f.label :email %>
+              <%= f.email_field :email, class: 'form-control' %>
 
-<%= f.submit "create my account", class:"sign_btn btn btn-primary" %>
-<% end %> 
-</div>
-</div>
+              <%= f.label :password %>
+               <%= f.password_field :password, class: 'form-control' %>
+
+              <%= f.label :password_confirmation, "Confirmation" %>
+              <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+              <%= f.submit "Create my account", class: "btn btn-primary" %>
+            <% end %>
+          </div>
+        </div>
 
