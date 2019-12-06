@@ -12,7 +12,10 @@ $gray-medium-light: #eaeaea;
 }
 
 /* universal */
-
+.bg{
+  width: 100%;
+  padding: 0 !important;
+}
 
 section {
   overflow: auto;
@@ -83,16 +86,21 @@ img{
 .form{
   width: 400px;
   height: 350px;
-  background: white;
-  color: #555;
+  background: rgba(241, 236, 236, 0.658);
+  color: rgb(85, 85, 85);
   position: relative;
   z-index: 2;
   top: 200px;
   left: 300px;
   border: 1px solid yellowgreen;
 }
+.navbar-nav > li > a {
+  color: white !important;
+}
 
-
+.navbar-nav > li > a:hover{
+  color: #222 !important;
+}
 .nav-bg{
   margin: 0 !important;
   background-image:linear-gradient( rgba(55, 6, 59, 0.5),rgba(0, 0, 255, 0.5)), url("bg.jpg");

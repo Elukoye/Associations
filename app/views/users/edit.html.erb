@@ -3,7 +3,7 @@
   
 <% if @user.errors.any? %>
 <h3>The following ERRORS prevented the<br/> USER from being CREATED!</h3>
-<ul>
+<ul  class="test2">
   <% @user.errors.full_messages.each do |msg| %>
     <li>
         <%= msg %>
