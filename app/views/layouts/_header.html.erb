@@ -29,11 +29,9 @@
                     <li><a href="/static_pages/home">Home</a></li>
 
                         <% if !logged_in? %>
-                            <li><%= link_to "Sign Up", signup_path, class: "nav-link" %></li>
+                      <li><%= link_to "Sign Up", signup_path, class: "nav-link" %></li>
                       <li><%= link_to "Log In", login_path, class: "nav-link" %></li>
                         <% else %>
-
-
                             <li><%= link_to "Log Out", logout_path, method: :delete, class: "nav-link" %></li>
                         <% end %>
                    </ul>
