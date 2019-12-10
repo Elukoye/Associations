@@ -1,1 +1,10 @@
-<h1>Show Users Events here</h1>
+
+<% if @event.attendees.any? %>
+    <% @event.attendees.each do |attendee| %>
+        <span class="attendee">
+            <%= attendee.username %>
+        </span> <br/>
+    <% end %>
+<% else %>
+    No attendees
+<% end %><br/>

@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   before_action :logged_in_user, only: %i[new create edit update destroy]
-  before_action :find_event, :correct_user, only: %i[edit update destroy]
+  before_action :correct_user, only: %i[edit update destroy]
 
   def index
     @future_events = Event.future_events
@@ -22,11 +22,11 @@ class EventsController < ApplicationController
   end 
   
   def show
-   #before-action :find_event
+   @event = Event.find(params[:id])
   end
 
   def edit
-   #before-action :find_event
+   @event = Event.find(params[:id])
   end
 
   def update
@@ -66,8 +66,5 @@ class EventsController < ApplicationController
       redirect_to root_path
     end
   end
-  
-  def find_event
-    @event = Event.find(params[:id])
-  end
+
 end
