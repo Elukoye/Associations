@@ -1,2 +1,27 @@
+<h1>Edit/Update Event </h1>  
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<h6>Make changes or add something below. </h6> 
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				Event Details
+			</div>
+			<div class="panel-body">
+			<%= form_for(@event) do |f| %>
 
+				<%= render 'fields', f: f %>
+
+				<%= link_to events_path, class: "btn btn-primary" do %>
+					Back </i>
+				<% end %>
+
+				<%= button_tag( class: "btn btn-success") do %>
+					Edit/Update Event </i>
+				<% end %>
+
+			<% end %>
+			</div>
+		</div>
+	</div>
+</div>
 

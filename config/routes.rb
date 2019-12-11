@@ -21,5 +21,6 @@ Rails.application.routes.draw do
 
   resources :users
   resources :events
+  resources :event_attendees, only: [:create, :destroy]
   
 end
