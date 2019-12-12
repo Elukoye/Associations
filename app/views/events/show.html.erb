@@ -1,4 +1,9 @@
 <h1>YOUR EVENTS</h1>
+
+ 
+<div class="div">
+     <%= render 'attend_cancel' %>       
+</div>
 <div>
    <div>Location:</div>
    <p><%= @event.location %></p> 
@@ -12,16 +17,22 @@
 <% if @event.attendees.any? %>
     <% @event.attendees.each do |attendee| %>
         <span class="attendee">
-            <%= attendee.username %>
+            <%= attendee.name %>
         </span> <br/>
     <% end %>
 <% else %>
     No attendees
 <% end %><br/>
 
-<div>
-<%= link_to "Invite Attendees", "#" %>
-</div>
+ 
+
+
 <div>
   <%= link_to "Create New Event", new_event_path %>  
+</div>
+<div>
+  <%= link_to "Edit/Update Event", edit_event_path(@event) %>  
+</div>
+<div>
+  <%= link_to "Back to created Events", events_path(@event) %>  
 </div>
