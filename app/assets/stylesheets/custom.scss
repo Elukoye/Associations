@@ -13,7 +13,7 @@ $gray-medium-light: #eaeaea;
 
 /* universal */
 .bg{
-  margin: 100px 0 0 100px;
+  margin: 80px 0 0 0px;
   width: 100%;
   padding: 0 !important;
 }
@@ -124,6 +124,15 @@ img{
 }
 
 /* forms */
+
+.bg-event{
+position: relative;
+}
+.new-event{
+position: absolute;
+top: 50px;
+left: 200px;
+}
 .form-sign{
   margin-top: 100px;
 }
@@ -218,7 +227,7 @@ main{
 /* footer */
 
 footer {
-  height: 400px;
+  height: 250px;
   background-color: #1e0a3c;
   margin-top: 45px;
   padding-top: 5px;
@@ -239,7 +248,6 @@ footer small {
 }
 
 footer ul {
-  float: right;
   list-style: none;
 }
 
