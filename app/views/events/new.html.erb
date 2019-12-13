@@ -1,3 +1,11 @@
+<% provide(:title, "Home") %>
+<!DOCTYPE html>
+<html>
+    <head>
+      <link href="https://fonts.googleapis.com/css?family=Calligraffitti&display=swap" rel="stylesheet">
+      <title><%= yield(:title) %> | Events Sample App</title>
+    </head>
+    <body> 
           <div class="top-container">
             <div class="container img bg-event">
               <img src="https://cdn.evbstatic.com/s3-build/perm_001/3640f4/django/images/homefeed/music-campaing-5-1080-desktop.jpg" alt="consumer-header-background">
@@ -18,14 +26,6 @@
             <% end %>
           </div>
         </div>
-<<<<<<< HEAD
-
-
-            </div>
-</div>
-          
-          
-          
-=======
-       <%= link_to "Back To Created Events", events_path %>
->>>>>>> fa34ca38f4b041cea6924d1a8a0658a328a1f892
+       <h3><%= link_to "Back To Created Events", events_path %></h3>
+    </body>
+</html>
