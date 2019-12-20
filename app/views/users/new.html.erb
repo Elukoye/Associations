@@ -1,5 +1,11 @@
 <% provide(:title, 'Sign up') %>
-        
+<!DOCTYPE html>
+<html>
+    <head>
+      <link href="https://fonts.googleapis.com/css?family=Calligraffitti&display=swap" rel="stylesheet">
+      <title><%= yield(:title) %> | Events Sample App</title>
+    </head>
+    <body> 
        <% if @user.errors.any? %>
           <div id="error_explanation">
             <div class="alert alert-danger">
@@ -38,4 +44,5 @@
             <% end %>
           </div>
         </div>
-
+</body>
+</html>

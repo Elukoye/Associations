@@ -13,7 +13,7 @@ $gray-medium-light: #eaeaea;
 
 /* universal */
 .bg{
-  margin: 100px 0 0 100px;
+  margin: 80px 0 0 0px;
   width: 100%;
   padding: 0 !important;
 }
@@ -35,9 +35,19 @@ textarea {
 }
 
 /* typography */
-
+body{
+  background: linear-gradient( rgba(55, 6, 59, 0.5),rgba(0, 0, 255, 0.5), rgba(131, 131, 138, 0.5));
+  font-family: 'Calligraffitti', cursive;
+}
+.event-box{
+  color: #1e0a3c;
+  font-size: 24px;
+  font-weight: 600;
+}
 h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
   line-height: 1;
+  font-family: 'Calligraffitti', cursive;
 }
 
 h1 {
@@ -59,6 +69,7 @@ h2 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+  font-family: 'Calligraffitti', cursive;
 }
 
 /* header */
@@ -124,6 +135,15 @@ img{
 }
 
 /* forms */
+
+.bg-event{
+position: relative;
+}
+.new-event{
+position: absolute;
+top: 50px;
+left: 200px;
+}
 .form-sign{
   margin-top: 100px;
 }
@@ -144,7 +164,8 @@ input {
   height: auto !important;
 }
 
-#error_explanation {
+#error_explanation,
+h3 {
   color: red;
   ul {
     color: red;
@@ -212,13 +233,18 @@ aside {
 /* main */
 
 main{
-  height: 400px;
+  height: 350px;
   background: white;
+  background: linear-gradient( rgba(55, 6, 59, 0.5),rgba(0, 0, 255, 0.5), rgba(131, 131, 138, 0.5));
 }
+
+/* about.html.erb*/
+
+
 /* footer */
 
 footer {
-  height: 400px;
+  height: 250px;
   background-color: #1e0a3c;
   margin-top: 45px;
   padding-top: 5px;
@@ -226,8 +252,9 @@ footer {
   color: #777;
 }
 
-footer a {
-  color: #555;
+footer a,
+h5 {
+  color: white;
 }
 
 footer a:hover {
@@ -239,7 +266,6 @@ footer small {
 }
 
 footer ul {
-  float: right;
   list-style: none;
 }
 

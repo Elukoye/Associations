@@ -1,4 +1,15 @@
-          <div class="container form">
+<% provide(:title, "Home") %>
+<!DOCTYPE html>
+<html>
+    <head>
+      <link href="https://fonts.googleapis.com/css?family=Calligraffitti&display=swap" rel="stylesheet">
+      <title><%= yield(:title) %> | Events Sample App</title>
+    </head>
+    <body> 
+          <div class="top-container">
+            <div class="container img bg-event">
+              <img src="https://cdn.evbstatic.com/s3-build/perm_001/3640f4/django/images/homefeed/music-campaing-5-1080-desktop.jpg" alt="consumer-header-background">
+            <div class="container form new-event">
             <%= form_for (@event) do |f| %>
               <div class="form-group">
 	                <%= f.label :loaction %>
@@ -15,4 +26,6 @@
             <% end %>
           </div>
         </div>
-       <%= link_to "Back To Created Events", events_path %>
+       <h3><%= link_to "Back To Created Events", events_path %></h3>
+    </body>
+</html>
