@@ -1,17 +1,30 @@
-<h3>User Info</h3>
-<p>
- Name: <%= @user.name %>
-</p>
-<p>
- Email: <%=@user.email%>
-</p>
-<ul>
- <li>
-  <%= link_to "Edit Your Profile",edit_user_path%>
- </li>
- <li>
-  <%= link_to "All Members",users_path%>
- </li>
-</ul>
+       <% provide(:title, @user.name) %>
+        <div class="row">
+          <aside class="col-md-4">
+            <section class="user_info">
+              <h1>
 
+                <%= @user.name %>
+              </h1>
+            </section>
+          </aside>
+        </div>
+
+<% if @user.events.any? %>
+    <h3>Submitted (<%= @user.events.count %>) events</h3>
+    <ul class="media-list">
+      <%= render @events %>
+    </ul>
+    <%= will_paginate @events %>
+  <% else %>
+    <h3>No Events Found</h3>
+  <% end %>
+ 
+  
+  <h2>Upcoming Events</h2> 
+  <ul class="media-list">
+    
+  </ul>
+
+  <h2>No Upcoming Events</h2>
 

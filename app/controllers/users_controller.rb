@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      session[:user_id] = @user.id
       flash[:success] = 'Your account was successfully created :)'
       redirect_to @user
     else
@@ -19,6 +20,7 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id])
+    @events = @user.events.paginate(page: params[:page])
   end
   
   def edit
@@ -38,7 +40,7 @@ class UsersController < ApplicationController
   
   private
   def user_params
-    params.require(:user).permit(:name,:email)
+    params.require(:user).permit(:name,:email,:password,:password_confirmation)
   end
   
 end

@@ -9,12 +9,19 @@
   </head>
 
   <body>
-    <%= render 'layouts/header' %>
-    <ul>
+  <%= render 'shared/error_messages'%>
+  <div class="container bg">
+      
+    
       <% flash.each do |name,msg| %>
         <li><%= msg %></li>
-     </ul>
+  
       <% end %>
     <%= yield %>
+  </div>
+   <%= render 'layouts/header' %>
+
+    <%= render 'layouts/main' %>
+    <%= render 'layouts/footer' %>
   </body>
 </html>

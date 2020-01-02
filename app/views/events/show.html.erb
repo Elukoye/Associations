@@ -1,0 +1,35 @@
+
+<h1>YOUR EVENTS</h1>
+
+ 
+<div class="div">
+     <%= render 'attend_cancel' %>       
+</div>
+<div>
+   <div>Location:</div>
+   <p><%= @event.location %></p> 
+   <div>Event Description:</div>
+   <p><%= @event.description %></p>
+   <div>Host:</div>
+   <p><%= @event.creator.name %></p> 
+</div>
+    
+<div>
+  <% if @event.attendees.any? %>
+    <% @event.attendees.each do |attendee| %>
+        <span class="attendee">
+            <%= attendee.name %>
+        </span> <br/>
+    <% end %>
+  <% else %>
+    No attendees
+  <% end %><br/>
+</div>
+
+
+<div>
+  <%= link_to "Edit/Update Event", edit_event_path(@event) %>  
+</div>
+<div>
+  <%= link_to "Back to created Events", events_path(@event) %>  
+</div>

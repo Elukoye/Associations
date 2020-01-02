@@ -1,0 +1,30 @@
+<h1>Events</h1>
+<% if logged_in? %>
+	<%= render 'jumbotron' %>
+<% end %>
+
+<div class="row">
+	<div class="col-md-12">
+		<h2>Upcoming Events</h2>
+		<% if @events.upcoming.any? %>
+			<ul class="media-list">
+				<%= render @events.upcoming %>
+			</ul>
+			<%= will_paginate @events.upcoming %>
+		<% else %>
+			<h3>Events (0)</h3>
+			<%= link_to new_event_path, class: 'btn btn-success' do %>
+				Add Event 
+			<% end %>
+		<% end %>
+	</div>
+	<div class="col-md-12">
+		<h2>Past Events</h2>
+		<% if @events.past.any? %>
+			<ul class="media-list">
+				<%= render @events.past %>
+			</ul>
+			<%= will_paginate @events.past %>
+		<% end %>
+	</div>
+</div>

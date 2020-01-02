@@ -1,0 +1,30 @@
+<% provide(:title, "Home") %>
+
+    <head>
+      <link href="https://fonts.googleapis.com/css?family=Calligraffitti&display=swap" rel="stylesheet">
+      <title><%= yield(:title) %> | Events Sample App</title>
+    </head>
+    <body> 
+          <div class="top-container">
+            <div class="container img bg-event">
+              <img src="https://cdn.evbstatic.com/s3-build/perm_001/3640f4/django/images/homefeed/music-campaing-5-1080-desktop.jpg" alt="consumer-header-background">
+            <div class="container form new-event">
+            <%= form_for (@event) do |f| %>
+              <div class="form-group">
+	                <%= f.label :location %>
+	                <%= f.text_field  :location,  class: 'form-control',  placeholder: "Event Location" %>
+              </div>         
+              <div class="form-group">
+	                <%= f.label :description %>
+	                <%= f.text_field  :description,  class: 'form-control',  placeholder: "Event description" %>
+              </div>        
+              <div class="form-group">
+	                <%= f.date_field :date%>
+              </div>
+              <%= f.submit "Create Event", class: "btn btn-primary" %>
+            <% end %>
+          </div>
+        </div>
+       <h3><%= link_to "Back To Created Events", events_path %></h3>
+    </body>
+

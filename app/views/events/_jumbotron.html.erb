@@ -1,0 +1,9 @@
+<div class="jumbotron">
+	<h1>Hello <%=  current_user.name %></h1>
+	<p>You've submitted 
+		<%= pluralize(current_user.events.count, "event") %>
+	</p>
+	<%= link_to new_event_path, class: 'btn btn-success' do %>
+		Add A New Event 
+	<% end %>
+</div>

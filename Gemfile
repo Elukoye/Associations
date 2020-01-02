@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails',        '5.1.6'
 gem 'bootstrap-sass', '3.3.7'
 gem 'bcrypt',         '3.1.12'
+gem 'rails-controller-testing'
 gem 'bootsnap'
 gem 'faker',          '1.7.3'
 gem 'will_paginate', '3.1.6'
@@ -16,9 +17,15 @@ gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.7.0'
 
 group :development, :test do
+  gem "rspec-rails"
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'webdrivers'
+  gem 'database_cleaner'
   gem 'sqlite3', '1.3.13'
   gem 'byebug',  '9.0.6', platform: :mri
 end
+
 
 group :development do
   gem 'web-console',           '3.5.1'

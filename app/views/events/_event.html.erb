@@ -1,0 +1,21 @@
+<li class="media">
+  
+  <div class="media-body">
+      <p>
+        Location:
+        <%= event.location %>
+        Date: 
+        <%= event.date %>
+      </p>
+      <p>
+      	Published On: <%= event.created_at.strftime('%b %d, %Y') %>
+        <% if logged_in? %>
+      	By: <%= link_to event.creator.name, user_path(event.creator) %><br>
+        <% else %>
+        By: <%= event.creator.name %><br>
+        <% end %>
+        
+      </p>
+      
+  </div>
+</li>
