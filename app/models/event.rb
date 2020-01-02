@@ -7,7 +7,7 @@ class Event < ApplicationRecord
   scope :upcoming, -> { where("Date >= ?", Date.today).order('Date ASC') } 
   scope :past, -> { where("Date < ?", Date.today).order('Date DESC') }
   
-  validates :creator_id, presence: true 
+  
   validates :location, presence: true, length: { maximum: 100 } 
   validates :location, presence: true, length: { maximum: 250 } 
   validates :description, presence: true

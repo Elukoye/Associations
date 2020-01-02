@@ -14,23 +14,19 @@
    <p><%= @event.creator.name %></p> 
 </div>
     
-
-<% if @event.attendees.any? %>
+<div>
+  <% if @event.attendees.any? %>
     <% @event.attendees.each do |attendee| %>
         <span class="attendee">
             <%= attendee.name %>
         </span> <br/>
     <% end %>
-<% else %>
+  <% else %>
     No attendees
-<% end %><br/>
-
- 
-
-
-<div>
-  <%= link_to "Create New Event", new_event_path %>  
+  <% end %><br/>
 </div>
+
+
 <div>
   <%= link_to "Edit/Update Event", edit_event_path(@event) %>  
 </div>

@@ -12,7 +12,7 @@
         <% if logged_in? %>
       	By: <%= link_to event.creator.name, user_path(event.creator) %><br>
         <% else %>
-        By: <%= event.creator.username %><br>
+        By: <%= event.creator.name %><br>
         <% end %>
         
       </p>
