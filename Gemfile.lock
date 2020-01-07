@@ -108,9 +108,16 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.7)
       mini_portile2 (~> 2.4.0)
+<<<<<<< HEAD
     public_suffix (4.0.2)
     puma (3.9.1)
     rack (2.0.8)
+=======
+    pg (0.20.0)
+    public_suffix (4.0.1)
+    puma (3.12.1)
+    rack (2.0.7)
+>>>>>>> 5c199f2b9f2ff52e450910c29d32d553f8e0ca00
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (5.1.6)
@@ -191,7 +198,11 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.3.13)
+<<<<<<< HEAD
     thor (1.0.1)
+=======
+    thor (0.20.3)
+>>>>>>> 5c199f2b9f2ff52e450910c29d32d553f8e0ca00
     thread_safe (0.3.6)
     tilt (2.0.10)
     turbolinks (5.0.1)
@@ -221,6 +232,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+<<<<<<< HEAD
   bcrypt (= 3.1.12)
   bootsnap
   bootstrap-sass (= 3.3.7)
@@ -243,6 +255,22 @@ DEPENDENCIES
   spring-watcher-listen (= 2.0.1)
   sqlite3 (= 1.3.13)
   turbolinks (= 5.0.1)
+=======
+  byebug
+  capybara (~> 2.13)
+  coffee-rails (~> 4.2)
+  jbuilder (~> 2.5)
+  listen (>= 3.0.5, < 3.2)
+  pg (= 0.20.0)
+  puma (~> 3.7)
+  rails (~> 5.1.6)
+  sass-rails (~> 5.0)
+  selenium-webdriver
+  spring
+  spring-watcher-listen (~> 2.0.0)
+  sqlite3 (= 1.3.13)
+  turbolinks (~> 5)
+>>>>>>> 5c199f2b9f2ff52e450910c29d32d553f8e0ca00
   tzinfo-data
   uglifier (= 3.2.0)
   web-console (= 3.5.1)
