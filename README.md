@@ -16,8 +16,12 @@
 ### Features:
 
 * A user can register for an account
-* A user can login and logout
-* A user can change their details
+* A user can login 
+* A user can change their account details
+* A user can create events
+* A user can attend events
+* And a user can logout
+
 * Bootstrap source in vendor/assets
 * Font awesome CSS source
 * Google Analytics Integration
