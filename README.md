@@ -2,7 +2,7 @@
 
 # The Odin Project: [Private Events](https://www.theodinproject.com/courses/ruby-on-rails/lessons/associations)
 
-## Live version of project :  [Private Events](#)
+## Live version of project :  [Private Events](https://warm-sea-24354.herokuapp.com/)
 
 
 ## Description:
