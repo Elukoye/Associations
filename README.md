@@ -1,6 +1,7 @@
 
 
 # The Odin Project: [Private Events](https://www.theodinproject.com/courses/ruby-on-rails/lessons/associations)
+![Peek 2020-03-13 14-32 (1)](https://user-images.githubusercontent.com/46542515/80397082-4c179880-88be-11ea-8180-8ac18824d1a7.gif)
 
 ## Live version of project :  [Private Events](https://warm-sea-24354.herokuapp.com/)
 
